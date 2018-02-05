@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+    <script src="components/loader.js"></script>
+    
+    <!-- INCLUDE BOOTSTRAP FILES -->
+    <link rel="stylesheet" href="components/loader.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.css"/>
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/npm.js"></script>
+    
+    <script src="js/motor.js"></script>
+    
+</head>
+<body onload="load()">
+    <div class="container">
+        <div class="jumbotron">
+            <h1 align="center">Grønn Fe</h1>
+            <h6 align="right">v2.0</h6>
+        </div>
+    </div>
+   
+    <div class="container">
+        <div class="jumbotron">
+            <form>
+                <div class="form-group">
+                  <label for="selectProduto">Item a ser vendido</label>
+                  <select class="form-control" id="selectProduto">
+                    <option>Frasco 50ml</option>
+                    <option>Dosinha 3ml</option>
+                  </select>
+                  <br />
+                  <label for="qtVenda">Quantidade</label>
+                  <input type="number" class="form-control" id="qtVenda">
+                </div>
+                <br />
+                <div>
+                    <a href="#" class="btn btn-success btn" onclick="vender()">
+                    <span class="glyphicon glyphicon-usd"></span> Venda</a>
+        
+                    <a href="#" class="btn btn-warning btn" onclick="perda()">
+                    <span class="glyphicon glyphicon-remove-sign"></span> Perda</a>
+                    
+                    <a href="#" class="btn btn-danger btn" onclick="limpar()">
+                    <span class="glyphicon glyphicon-refresh"></span> Limpar</a>
+                </div>
+            </form>
+        </div>
+        <hr />
+        <div class="well">
+            <label id="saida"></label>
+        </div>
+    </div>
+</body>
+</html>
